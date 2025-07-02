@@ -1,0 +1,13 @@
+name: Run tests
+
+on:
+  - pull_request
+  - push
+
+jobs:
+  ci:
+    uses: houseabsolute/workflow-perl-dzil-ci/.github/workflows/ci.yml@v0
+    with:
+      dist: Markdent
+      min-perl: 5.12.5
+      ref: v0
